@@ -3,6 +3,8 @@
 \LoadClass[11pt]{article}
 \usepackage[top=0.5in, left=0.5in, right=0.5in, bottom=0.5in]{geometry}
 
+\pagenumbering{gobble}
+
 \usepackage[backend=bibtex,maxcitenames=4,giveninits=true]{biblatex}
 \usepackage{tabto}
 \usepackage{changepage}
