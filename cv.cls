@@ -5,7 +5,7 @@
 
 \pagenumbering{gobble}
 
-\usepackage[backend=bibtex,maxcitenames=4,giveninits=true]{biblatex}
+\usepackage[backend=bibtex,maxcitenames=4]{biblatex}
 \usepackage{tabto}
 \usepackage{changepage}
 \usepackage{hyperref}
@@ -13,8 +13,8 @@
 \usepackage{calc}
 \usepackage{xifthen}
 \usepackage{fontspec}
-\setmainfont[BoldFont={Fira Sans SemiBold}]{Fira Sans Regular}
-\setmonofont[SizeFeatures={Size=10}]{FiraCode Nerd Font}
+\setmainfont{HelveticaNeue-Roman}
+\newfontface\fontlight{HelveticaNeue-Light}
 
 \def \spacing {0.1in}
 \def \rightedge {0.3in}
@@ -37,14 +37,14 @@
 % location
 % date
 \newcommand\presentation[5][]{
-    {\tabto{\spacing}#3, {\small #4} \hfill \textsl{#5}}
+    {\tabto{\spacing}#3, {\small #4} \dotfill \textsl{#5}}
 
     {\tabto{\bullet}{``#2''} \ifthenelse{\isempty{#1}}{}{\footnotesize(#1)}}
     \vspace{0.3em}
 }
 
 \newcommand\publication[1]{
-\citenames{#1} [arXiv:\texttt{\citefield{#1}{eprint}}]
+    \citenames{#1} [arXiv:\citefield{#1}{eprint}]
 }
 
 \newbibmacro*{name:fixed-given-family}[4]{%
@@ -90,4 +90,4 @@
   \usebibmacro{note+pages}\adddot
 }{}{}
 
-\newcommand\header[1]{\vspace{0.2em} \textsc{\Large #1} \hrulefill \vspace{0.2em}}
+\newcommand\header[1]{\vspace{0.2em} {\fontlight\Large #1} \hrulefill \vspace{0.2em}}
