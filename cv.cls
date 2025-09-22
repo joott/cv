@@ -13,8 +13,8 @@
 \usepackage{calc}
 \usepackage{xifthen}
 \usepackage{fontspec}
-\setmainfont{HelveticaNeue-Roman}
-\newfontface\fontlight{HelveticaNeue-Light}
+\setmainfont{Helvetica Neue}
+\newfontface\fontlight{Helvetica Neue Light}
 
 \def \spacing {0.1in}
 \def \rightedge {0.3in}
@@ -87,6 +87,7 @@
   \printnames[cvnames]{labelname}\adddot\addspace%
   \usebibmacro{title}%
   \usebibmacro{journal+issuetitle}%
+  \usebibmacro{booktitle}%
   \usebibmacro{note+pages}\adddot
 }{}{}
 
