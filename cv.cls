@@ -92,3 +92,4 @@
 }{}{}
 
 \newcommand\header[1]{\vspace{0.2em} {\fontlight\Large #1} \hrulefill \vspace{0.2em}}
+\newcommand\subheader[1]{\large--- {\bfseries #1}}
